@@ -1,0 +1,113 @@
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+#game {
+  position: relative;
+  width: 1920px;
+  height: 640px;
+  background-image: url('/c:/Users/Free/Desktop/Workspace/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  overflow: visible;
+}
+
+#ground {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: #334155;
+}
+
+#ball {
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fde047, #facc15 70%);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35), 0 0 12px rgba(250, 204, 21, 0.35);
+  will-change: transform;
+  z-index: 2;
+}
+
+#trail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+#platform {
+  display: none;
+}
+
+.platform {
+  position: absolute;
+  background: linear-gradient(180deg, #06b6d4 0%, #0ea5e9 100%);
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(14, 165, 233, 0.35);
+}
+
+.hazard {
+  position: absolute;
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.45);
+}
+
+.goal {
+  position: absolute;
+  background: radial-gradient(circle at 50% 50%, #22c55e, #16a34a 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6), inset 0 0 12px rgba(34, 197, 94, 0.6);
+}
+
+.wall {
+  position: absolute;
+  background: linear-gradient(180deg, #475569 0%, #334155 100%);
+  border-radius: 6px;
+  box-shadow: inset 0 0 8px rgba(15, 23, 42, 0.5);
+}
+.wall {
+  position: absolute;
+  background: linear-gradient(180deg, #475569 0%, #334155 100%);
+  border-radius: 6px;
+  box-shadow: inset 0 0 8px rgba(15, 23, 42, 0.5);
+}
+
+#hud {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+#hud > div {
+  display: none;
+  color: #e2e8f0;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+}

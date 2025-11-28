@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바운스 볼</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+<canvas id="trail"></canvas>
+<div id="ball"></div>
+<div id="ground"></div>
+<div class="platform" style="left: 140px; top: 520px; width: 200px; height: 12px"></div>
+<div class="platform" style="left: 580px; top: 440px; width: 180px; height: 12px"></div>
+<div class="platform" style="left: 340px; top: 360px; width: 140px; height: 12px"></div>
+<!-- Left extension -->
+<div class="platform" style="left: 60px; top: 500px; width: 160px; height: 12px"></div>
+<div class="platform" style="left: 260px; top: 430px; width: 160px; height: 12px"></div>
+<!-- Right extension path to goal -->
+<div class="platform" style="left: 1080px; top: 520px; width: 200px; height: 12px"></div>
+<div class="platform" style="left: 1260px; top: 450px; width: 180px; height: 12px"></div>
+<div class="platform" style="left: 1480px; top: 380px; width: 160px; height: 12px"></div>
+<div class="platform" style="left: 1700px; top: 300px; width: 160px; height: 12px"></div>
+<div class="platform" style="left: 1720px; top: 240px; width: 120px; height: 12px"></div>
+
+<div class="hazard" style="left: 60px; top: 600px; width: 120px; height: 20px"></div>
+<div class="hazard" style="left: 740px; top: 600px; width: 140px; height: 20px"></div>
+<div class="hazard" style="left: 1040px; top: 600px; width: 140px; height: 20px"></div>
+<div class="hazard" style="left: 1360px; top: 600px; width: 140px; height: 20px"></div>
+<div class="hazard" style="left: 1580px; top: 600px; width: 160px; height: 20px"></div>
+
+<!-- Blocking walls -->
+<div class="wall" style="left: 980px; top: 360px; width: 20px; height: 220px"></div>
+<div class="wall" style="left: 1450px; top: 320px; width: 20px; height: 260px"></div>
+
+<div class="goal" style="left: 1760px; top: 200px; width: 80px; height: 80px"></div>
+<div id="hud">
+  <div id="msg-dead">죽었습니다 — R 키로 재시작</div>
+  <div id="msg-win">최정우 바보</div>
+ </div>
+ </div>
+<script src="script.js"></script>
+</body>
+</html>
